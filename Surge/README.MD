@@ -1,5 +1,5 @@
 # 准备工作
----
+
 了解 Surge 中文手册：https://surge.mitsea.com/policy.
 
 了解Sub-Store 高级订阅管理工具：https://limbopro.com/archives/Sub-Store.html;
