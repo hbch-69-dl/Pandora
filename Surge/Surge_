@@ -1,0 +1,17 @@
+[Rule]
+# Block HTTP3/QUIC
+AND, ((PROTOOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+# App Store
+DOMAIN,p14-buy.itunes.apple.com,Proxy
+# 绕过企业证书
+DOMAIN,ocsp.apple.com,REJECT
+# 屏蔽YouTuber的UDP
+AND,((PROTOOCOL,UDP),(DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
+# Ruleset
+RULE-SET,cn.txt,DIRECT
+RULE-SET,Youtube.txt,Youtube
+RuLE-SET,Telegram.txt,Telegram
+RuLE-SET,private.txt,Proxy
+# Apple
+# Apple Music Streaming
+DOMAIN,aod,itunes.apple.com,DIRECT
