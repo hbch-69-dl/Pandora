@@ -1,0 +1,218 @@
+
+#Lucky的自用Quantumult X配置
+[general]
+#节点延迟#节点延迟测试
+server_check_url=http://www.gstatic.com/generate_204
+#网络连接测试
+network_check_url=http://www.bing.com
+#服务器超时测试
+server_check_timeout=2000
+#图标显示
+profile_img_url=https://github.githubassets.com/images/modules/site/integrators/google.png
+#Check节点IP
+geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
+#解析器
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+#跳过代理
+
+excluded_routes=239.255.255.250/32, 24.105.30.129/32, 185.60.112.157/32, 182.162.132.1/32, 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+
+#udp丢弃
+udp_drop_list=443
+#第一个filter为4g模式开启规则分流，第二个filter为其他wifi下开启规则分流，第三个wifi1修改成你路由器翻墙的wifi名开启直连模式，第四个wifi2为你公司或者其他有路由器翻墙的WiFi名走直连）
+#默认关闭根据wifi切换模式，如需开启，删除下方的"#"即可
+#running_mode_trigger=filter, filter, filter:all_direct, filter: all_direct
+# DNS排除列表
+dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me, *.pingan.com.cn, *.cmbchina.com
+
+
+[dns]
+#禁用 IPv6
+#no-ipv6
+#禁用系统 DNS
+#no-system
+#DNS服务器
+server=223.5.5.5
+server=119.29.29.29
+server=114.114.114.114
+server=/*icloud.com/119.29.29.29
+server=/*icloud.com.cn/119.29.29.29
+server=/*tencent.com/119.29.29.29
+server=/*weixin.com/119.29.29.29
+
+
+[task_local]
+# 贴吧签到
+8 0 * * ? https://raw.githubusercontent.com/chxm1023/Task/main/TieBa/TieBa_signin.js, tag=百度贴吧签到, img-url=https://raw.githubusercontent.com/chxm1023/Task/main/icon/tieba.png, enabled=true
+
+event-interaction https://raw.githubusercontent.com/getsomecat/Qx/main/Net_Speed.js, tag=网速查询, img-url=bolt.square.fill.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=媒体解锁查询, img-url=play.circle.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/traffic-check.js, tag=策略流量查询, img-url=arrow.up.arrow.down.circle.system, enabled=true
+
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=地理位置查询, img-url=location.circle.system, enabled=true
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/switch-check-google.js, tag=谷歌送中查询, img-url=drop.circle.system, enabled=true
+event-interaction https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/TaskLocal/NeteaseMusicUnlockCheck.js, tag=网易音乐查询, img-url=lock.circle.system, enabled=true
+
+# > 代理链路检测
+event-interaction https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/NodeLinkCheck/Script/NodeLinkCheck.js, tag=代理链路检测, img-url=link.circle.system, enabled=true
+
+[http_backend]
+# > BoxJs使用HTTP_backend设置的详细教程链接
+# > https://chavyleung.gitbook.io/boxjs/
+https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=boxjs.com, tag=BoxJS, path=^/, enabled=false
+
+
+[policy]
+static=网速超快, proxy, 延迟优选节点, 香港延迟优选, 台湾延迟优选, 日本延迟优选, 韩国延迟优选, 美国延迟优选, 新加坡延迟优选, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_03.png
+
+static=苹果服务, direct, 香港延迟优选, 美国延迟优选, proxy, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_SpringLoaded.png
+
+
+url-latency-benchmark=延迟优选节点, server-tag-regex=^(.(?!(〃◉′ω`◉〃)))*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_01.png
+url-latency-benchmark=香港延迟优选, server-tag-regex=(?=.*(香港|港|HK|(?i)Hong Kong))^((?!(台湾|日本|韩国|新加坡|美国)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/Twoandz9/Sifei.png
+url-latency-benchmark=台湾延迟优选, server-tag-regex=(?=.*(台湾|台|TW|(?i)Taiwan))^((?!(香港|日本|韩国|新加坡|美国)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_02.png
+url-latency-benchmark=日本延迟优选, server-tag-regex=(?=.*(日本|日|JP|(?i)Japan))^((?!(香港|台湾|韩国|新加坡|美国)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/iqZone.png
+url-latency-benchmark=韩国延迟优选, server-tag-regex=(?=.*(韩国|韩|KR|(?i)Korea))^((?!(香港|台湾|日本|新加坡|美国)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/Twoandz9/Xray.png
+url-latency-benchmark=美国延迟优选, server-tag-regex=(?=.*(美国|美|US|(?i)UnitedStates))^((?!(香港|台湾|日本|韩国|新加坡)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/v2tun.png
+url-latency-benchmark=新加坡延迟优选, server-tag-regex=(?=.*(新加坡|狮|SG|(?i)Singapore))^((?!(香港|台湾|日本|韩国|美国)).)*$, check-interval=1800, tolerance=30, alive-checking=false, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_04.png
+
+
+#服务器远程订阅
+[server_remote]
+
+#规则分流远程订阅
+[filter_remote]
+
+# Direct+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Direct/Direct.list, tag=修正, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/EAlyce/conf/main/Rule/FQNovelAdvertising.list, tag=番茄去广告, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/Rule/Telegram.list, tag=TG转圈, force-policy=网速超快, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list, tag=Direct, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+
+# Reject
+# > Advertising
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list, tag=⛔️Advertising, force-policy=reject, update-interval=172800, opt-parser=true, inserted-resource=true, enabled=true
+# > Hijacking
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Hijacking.list, tag=⛔️Hijacking, force-policy=reject, update-interval=172800, opt-parser=true, inserted-resource=true, enabled=true
+# > Tracking
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Tracking.list, tag=⛔️Tracking, force-policy=reject, update-interval=172800, opt-parser=true, inserted-resource=true, enabled=true
+
+# Streaming!CN
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list, tag=国外影音, force-policy=网速超快, update-interval=172800, opt-parser=true, enabled=true
+
+# StreamingCN
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list, tag=🎞StreamingCN, force-policy=网速超快, update-interval=172800, opt-parser=true, enabled=true
+
+# Proxy
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=Proxy, force-policy=网速超快, update-interval=172800, opt-parser=true, enabled=true
+
+# Direct
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list, tag=🇨🇳Direct, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+
+# WeChat
+
+# Proxy+
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy+.list, tag=Geoip, force-policy=网速超快, update-interval=172800, opt-parser=true, enabled=true
+https://github.com/NobyDa/Script/raw/master/Surge/WeChat.list, tag=微信转圈, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=Tktok, force-policy=美国延迟优选, update-interval=172800, opt-parser=true, enabled=true
+
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX//YouTube/YouTube.list, tag=YouTube 规则, force-policy=网速超快, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Apple.list, tag=Apple, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
+
+# YouTube规则
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/NetEaseMusic/NetEaseMusic.list, tag=解锁网易云音乐, force-policy=网易云解锁, update-interval=172800, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/HTTPDNS.Block.list, tag=HTTPDNS.Block, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/As-Lucky/Lucky/main/Ruleset/AdBlock.list, tag=AD-Lucky, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+
+
+#rewrite 复写远程订阅
+[rewrite_remote]
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Module/Block/iOSUpdate.sgmodule, tag=屏蔽ios更新, update-interval=172800, opt-parser=true, enabled=true
+
+
+https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到, update-interval=172800, opt-parser=true, enabled=true
+
+
+https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule, tag=YouTube 解锁, update-interval=172800, opt-parser=true, enabled=false
+
+# 百度贴吧每日自动签到获取Cookie
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.sgmodule, tag=知乎去广告, update-interval=86400, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/Ad.conf, tag=Ad, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule, tag=百度贴吧超级去广告, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/chxm1023/Task/main/TieBa/TieBa_cookie.js, tag=贴吧获取Cookie, update-interval=172800, opt-parser=false, enabled=true
+
+https://github.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=boxjs, update-interval=172800, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, tag=wps  noby, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/QX.snippet, tag=substore, update-interval=172800, opt-parser=true, enabled=true
+
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/xiaohongshu.snippet, tag=小红书去广告, update-interval=172800, opt-parser=false, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.qxrewrite, tag=什么值得买去广告, update-interval=172800, opt-parser=true, enabled=true
+
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet, tag=菜鸟去广告, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet, tag=微博去广告, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf, tag=网页去广告, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet, tag=高德地图去广告, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf, tag=MyBlockAds, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/bilibili.snippet, tag=哔哩哔哩去广告, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/KeepStyle.conf, tag=Keep去广告, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/DualSubs/YouTube/main/modules/DualSubs.YouTube.snippet, tag=油管双语, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule, tag=京东历史价格, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/Bilibili_CC.conf, tag=B站繁体, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet, tag=小程序净化, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/Repcz/Open-Proflies/main/QuantumultX/Rewrites/ITHome.snippet, tag=IT之家去广告, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/VirgilClyne/GetSomeFries/raw/main/snippet/HTTPDNS.Block.snippet, tag=h t t p d n s, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightDownload.sgmodule, tag=解除 TF 限制, update-interval=172800, opt-parser=true, enabled=true
+
+# 本地服务器
+[server_local]
+
+#本地重写
+[rewrite_local]
+
+#本地分流规则(对于完全相同的某条规则，本地的将优先生效)
+[filter_local]
+host, m.ttshu8.com, 网速超快
+host-suffix, p3-sign.douyinpic.com, direct
+host-suffix, p3.douyinpic.com, direct
+host-suffix, lf-webcast-gr-sourcecdn.bytegecko.com, direct
+host-suffix, sf3-cdn-tos.douyinstatic.com, direct
+host, www.1qxs.com, direct
+host, tsdlri.xyz, direct
+host, svedeu.lol, direct
+host, t.emby.pro, direct
+host, emby.aca.best, direct
+host, stream2.misakaf.org, direct
+host, sr.809688.xyz, direct
+host, emby.fishchips.io, direct
+host, raw.githubusercontent.com, 网速超快
+host, p9-ppx-sign.byteimg.com, direct
+host, sub.store, 网速超快
+host-suffix, ios.chat.openai.com, 日本延迟优选
+host, o33249.ingest.sentry.io, 日本延迟优选
+host, api.revenuecat.com, 日本延迟优选
+host, browser-intake-datadoghq.com, 日本延迟优选
+host, ad.12306.cn, direct
+host, sdkapp.uve.weibo.com, direct
+host-suffix, ucweb.com, direct
+host, ntb.lanjie100.com, reject
+host-suffix, kuwo.cn, direct
+ip-cidr, 180.76.76.200/32, reject
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+ip-cidr, 182.254.116.0/24, direct
+final, 网速超快
+
+[mitm]
+# 跳过验证证书
+skip_validating_cert = false
+# 强制SNI域名
+force_sni_domain_name = false
+# 主机名
+hostname = pangolin-sdk-toutiao.com, pglstatp-toutiao.com, byteimg.com, pstatp.com, snssdk.com, -*amemv.com, -*snssdk.com, -www.google.com, ms.jr.jd.com, me-api.jd.com, api.m.jd.com, *.byteoversea.com, *.tik-tokapi.com, c.tieba.baidu.com
