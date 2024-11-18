@@ -11,7 +11,10 @@
 
 只测试自用脚本，其他大部分脚本未测试可用性.
 
+## 机场推荐
 
+
+---
 > [!Important]
 > ## 免责申明
 >
@@ -30,3 +33,55 @@
 > 以任何方式查看本项目的个人或者组织和直接或者间接使用本项目任何资源内容的使用者都应该仔细阅读本声明。本人保留随时对免责声明进行补充或更改的权利。
 >
 > 直接或者间接使用并复制任何本项目相关内容的个人或组织则被视为已经接受本项目的免责声明。本人保留在不通知的情况下随时修改、更新或删除本声明的权利。
+
+---
+
+## 特别感谢：
+
+* [@NobyDa](https://github.com/NobyDa)
+
+* [@lhie1](https://github.com/lhie1)
+
+* [@ConnersHua](https://github.com/DivineEngine)
+
+* [@chavyleung](https://github.com/chavyleung)
+
+* [@ACL4SSR](https://github.com/ACL4SSR)
+
+* [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)
+
+* [@Matrix](https://github.com/Centralmatrix3)
+
+* [@yichahucha](https://github.com/yichahucha)
+
+* [@langkhach270389](https://github.com/langkhach270389)
+
+* [@Choler](https://github.com/Choler)
+
+* [@onewayticket255](https://github.com/onewayticket255)
+
+* [@NavePnow](https://github.com/NavePnow)
+
+* [@Meeta](https://github.com/MeetaGit)
+
+* [@Neurogram-R](https://github.com/Neurogram-R)
+
+* [@sazs34](https://github.com/sazs34)
+
+* [@id77](https://github.com/id77)
+
+* [@lxk0301](https://github.com/lxk0301)
+
+* [@红鲤鱼与绿鲤鱼与驴](https://github.com/wangdelu2020)
+
+* [@iisams](https://github.com/iisams/Scripts)
+
+* [@barrym-chen](https://github.com/barrym-chen/Script)
+
+* [@ziye12](https://github.com/ziye12/JavaScript)
+
+* [@公众号墨鱼手记](https://github.com/ddgksf2013)
+
+* [@深巷有猫](https://github.com/Rabbit-Spec)
+
+* [@luestr](https://github.com/luestr?tab=repositories)
