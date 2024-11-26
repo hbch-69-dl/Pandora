@@ -122,6 +122,7 @@ DOMAIN-SUFFIX,pastie.org
 DOMAIN-SUFFIX,patreon.com
 DOMAIN-SUFFIX,pcloud.com
 DOMAIN-SUFFIX,peing.net
+DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,player.fm
 DOMAIN-SUFFIX,podbean.com
 DOMAIN-SUFFIX,poe.com
@@ -512,6 +513,7 @@ DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
 # ------
 # > Microsoft
+DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,msn.com
