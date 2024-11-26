@@ -51,6 +51,5 @@ DOMAIN,imagine.meta.com
 # GitHub Copilot
 DOMAIN-SUFFIX,githubcopilot.com
 
-# perplexity
-DOMAIN-SUFFIX,perplexity.ai
+
 
