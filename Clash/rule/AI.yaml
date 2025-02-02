@@ -9,6 +9,7 @@ payload:
 - DOMAIN-KEYWORD,anthropic
 - DOMAIN-KEYWORD,Claude
 - DOMAIN-SUFFIX,perplexity.ai
+- DOMAIN-SUFFIX,ab.chatgpt.com
 - DOMAIN-SUFFIX,chatgpt.com
 - DOMAIN-SUFFIX,auth0.com
 - DOMAIN-SUFFIX,client-api.arkoselabs.com
