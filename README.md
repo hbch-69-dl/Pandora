@@ -6,7 +6,8 @@
 不负责维护脚本.
 
 转链接前缀
-https://ghp.ci
+https://ghp.ci/
+https://git.imee.me/
 
 
 > [!Caution]
