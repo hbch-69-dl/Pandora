@@ -109,6 +109,7 @@ proxy-groups:
   - {name: 一键智能,   <<: *Select, include-all: true, icon: https://git.imee.me/https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
   - {name: AI平台,    <<: *Sel_US, include-all: true, filter: "🇺🇸|美|🇸🇬|新|🇯🇵|日|🇼🇸|🇹🇼|台",exclude-filter: "🇭🇰|港", icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
   - {name: 电报消息,   <<: *Sel_SG, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
+  - {name: Notion, type: select, proxies: [DIRECT, 香港节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Notion.png }
   - {name: 国际媒体,   <<: *Sel_Smart, icon: https://git.imee.me/https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 香港智能,   <<: *Smart, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾智能,   <<: *Smart, filter: *FilterTW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
@@ -126,6 +127,7 @@ rule-providers:
   category-ai-!cn:    {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/category-ai-!cn.mrs}
   geolocation-!cn:    {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/geolocation-!cn.mrs}
   youtube:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/youtube.mrs}
+  Notion:             {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/hbch-69-dl/Pandora/refs/heads/main/Clash/rule/Notion.yaml ,                  path: ./ruleset/Notion.yaml     }
   spotify:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/spotify.mrs}
   netflix:            {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/netflix.mrs}
   disney:             {type: http, interval: 86400, behavior: domain, format: mrs, url: https://github.com/666OS/YYDS/raw/main/mihomo/rules/disney.mrs}
@@ -141,6 +143,7 @@ rules:
   - DST-PORT,123,DIRECT
   - DOMAIN-SUFFIX,imee.me,DIRECT
   - RULE-SET,telegram,电报消息
+  - RULE-SET,Notion,Notion
   - RULE-SET,category-ai-!cn,AI平台
   - RULE-SET,youtube,国际媒体
   - RULE-SET,spotify,国际媒体
