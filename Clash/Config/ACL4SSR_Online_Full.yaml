@@ -58,19 +58,6 @@ proxy-groups:
       - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
-  - name: 📒 Notion
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇯🇵 日本节点
-      - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
-      - 🚀 手动切换
-      - DIRECT
   - name: 🎥 奈飞视频
     type: select
     proxies:
@@ -411,13 +398,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Notion:
-    url: https://raw.githubusercontent.com/hbch-69-dl/Pandora/refs/heads/main/Clash/rule/Notion.yaml
-    path: ./ruleset/Notion.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   Netflix:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Netflix.list
     path: ./ruleset/Netflix.list
@@ -510,7 +490,6 @@ rules:
   - "RULE-SET,Steam,🎮 游戏平台"
   - "RULE-SET,Nintendo,🎮 游戏平台"
   - "RULE-SET,YouTube,📹 油管视频"
-  - "RULE-SET,Notion,📒 Notion"
   - "RULE-SET,Netflix,🎥 奈飞视频"
   - "RULE-SET,Bahamut,📺 巴哈姆特"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩"
