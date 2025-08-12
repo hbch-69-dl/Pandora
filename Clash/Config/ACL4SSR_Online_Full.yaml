@@ -510,7 +510,7 @@ rules:
   - "RULE-SET,Steam,🎮 游戏平台"
   - "RULE-SET,Nintendo,🎮 游戏平台"
   - "RULE-SET,YouTube,📹 油管视频"
-  - "RULE-SET,Notion,📒 Notion"
+  - RULE-SET,Notion,📒 Notion
   - "RULE-SET,Netflix,🎥 奈飞视频"
   - "RULE-SET,Bahamut,📺 巴哈姆特"
   - "RULE-SET,BilibiliHMT,📺 哔哩哔哩"
