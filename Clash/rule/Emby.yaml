@@ -1,3 +1,5 @@
 payload:
   - DOMAIN-KEYWORD,emby
   - DOMAIN-KEYWORD,misakaf
+  - DOMAIN-SUFFIX,starharn-cf.nebula-media.org
+  - DOMAIN-SUFFIX,emby1.69yun69.com
