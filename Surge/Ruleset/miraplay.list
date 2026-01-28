@@ -1,3 +1,8 @@
-#miraplay规则
+#!name=XPTV规则 &  #miraplay规则
+# UPDATED: 2026-01-26 09:16:57
+# DOMAIN-SUFFIX: 6
+#玩偶
 DOMAIN-KEYWORD,wogg.xxooo.cf
+#木偶
 DOMAIN-SUFFIX,666.666291.xyz
+
