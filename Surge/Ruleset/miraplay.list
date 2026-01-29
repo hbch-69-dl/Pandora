@@ -3,8 +3,8 @@
 #已标注了大部分可直连的地址,遇到无法直连的情况自行调整
 #XPTV主站-部分地区可以直连自行尝试
 # UPDATED: 2026-01-26 09:16:57
-# DOMAIN-SUFFIX: 6
-# DOMAIN-KEYWORD: 6
+# DOMAIN-SUFFIX: 60
+# DOMAIN-KEYWORD: 60
 # DOMAIN:20
 
 DOMAIN-SUFFIX, xptvhelper.link
