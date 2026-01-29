@@ -9,9 +9,12 @@
 DOMAIN-SUFFIX, xptvhelper.link
 #玩偶
 DOMAIN-KEYWORD,wogg.xxooo.cf
-DOMAIN-KEYWORD,wogg.net
+DOMAIN-SUFFIX,wogg.net
+DOMAIN-SUFFIX, wogg.one
+DOMAIN-SUFFIX, wogg.333232.xyz
 #木偶
-DOMAIN-SUFFIX,666.666291.xyz
+DOMAIN-SUFFIX,123.666.666291.xyz
+DOMAIN-SUFFIX, mogg.top
 #多多影视
 DOMAIN-SUFFIX,tv.yydsys.top
 #校长影视
@@ -52,10 +55,7 @@ DOMAIN-SUFFIX, xiaoya.pro
 #网盘源
 #小米
 DOMAIN, mihdr.top
-#木偶
-DOMAIN-SUFFIX, mogg.top
-#玩偶
-DOMAIN-SUFFIX, wogg.one
+
 #雷鲸
 DOMAIN, www.leijing.xyz
 #校长
@@ -70,6 +70,7 @@ DOMAIN, yydsys.top
 DOMAIN, woog.nxog.eu.org
 #云盘吧
 DOMAIN, yunpan8.cc
+DOMAIN-SUFFIX,yunpan6.com
 #nmlive相关
 DOMAIN-SUFFIX, bilivideo.com
 DOMAIN, slink.ltd
