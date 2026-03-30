@@ -1,0 +1,15 @@
+#CN补丁🛑
+#更新 2026年3月30日
+DOMAIN,ime.doubao.com
+DOMAIN-SUFFIX,flomoapp.com
+DOMAIN-SUFFIX,h5.xiaoecloud.com
+DOMAIN-SUFFIX,live.shkt.online
+DOMAIN-SUFFIX,s.cdn.gzfeice.com
+DOMAIN-SUFFIX,edu.s.feice.co
+DOMAIN-SUFFIX,duozhuayu.com
+DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
+IP-CIDR,154.222.27.33/32,no-resolve
+DOMAIN-SUFFIX,img.ffzy888.com
+DOMAIN-SUFFIX,xsayang.fun
+DOMAIN-SUFFIX,wogg.xxooo.cf
+DOMAIN-SUFFIX,666291.xyz
