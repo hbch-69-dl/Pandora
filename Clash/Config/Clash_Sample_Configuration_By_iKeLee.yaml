@@ -211,7 +211,7 @@ rule-providers:
   AI:
     <<: *RuleProviders
     path: './rules/AI.yaml'
-    url: 'https://raw.githubusercontent.com/hbch-69-dl/Pandora/refs/heads/main/Clash/rule/AI.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
 
   TikTok:
     <<: *RuleProviders
